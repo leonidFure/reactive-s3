@@ -1,0 +1,17 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/postgres
+    username: lgorev
+    password: pass123
+    pool:
+      initial-size: 10
+      max-size: 50
+      max-idle-time: 10m
+      max-life-time: 30m
+aws:
+  access-Key: minio
+  secret-key: minio123
+  bucket-name: lgorev
+  endpoint: http://localhost:9000
+  read-timeout: 30
+  write-timeout: 30

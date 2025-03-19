@@ -39,6 +39,5 @@ public class AwsClientImpl implements AwsClient {
                 .log()
                 .flatMapMany(Flux::from)
                 .log();
-
     }
 }

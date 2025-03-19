@@ -24,6 +24,7 @@ public class AwsClientConfig {
     public S3AsyncClient s3AsyncClient(AwsCredentialsProvider awsCredentialsProvider) {
         return S3AsyncClient.builder()
                 .httpClient(sdkAsyncHttpClient())
+                .region(Region.EU_CENTRAL_1)
                 .requestChecksumCalculation(RequestChecksumCalculation.WHEN_SUPPORTED)
                 .credentialsProvider(awsCredentialsProvider)
                 .endpointOverride(URI.create(awsClientProperties.endpoint()))
